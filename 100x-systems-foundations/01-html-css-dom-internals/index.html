@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>System Monitor Dashboard Shell</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app-container">
+    <header class="top-bar">
+      <div class="logo">
+        <span class="status-indicator"></span>
+        <h1>SYSTEMS TELEMETRY</h1>
+      </div>
+      <span class="badge">NODE 01: ACTIVE</span>
+    </header>
+
+    <main class="content-grid">
+      <div class="card">
+        <h2>Kernel Packet Monitor</h2>
+        <p>Listening for real-time telemetry events and network packets on interface <code>eth0</code>.</p>
+        <div class="metric-row">
+          <span class="metric-label">Status:</span>
+          <span class="metric-value live">ONLINE</span>
+        </div>
+        <button class="primary-btn">Inspect Socket</button>
+      </div>
+
+      <div class="card">
+        <h2>Sandboxed MicroVM Decoy</h2>
+        <p>Isolated Firecracker instance prepared for quarantine routing upon threat detection.</p>
+        <div class="metric-row">
+          <span class="metric-label">Decoy ID:</span>
+          <span class="metric-value">vm-alpha-9</span>
+        </div>
+        <button class="secondary-btn">View Telemetry</button>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
