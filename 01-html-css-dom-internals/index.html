@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html>
+<body style="margin: 0; font-family: Arial, Helvetica, sans-serif;">
+
+  <!-- Navbar -->
+  <div style="display: flex; justify-content: space-between;
+  margin-left: 100px; margin-right: 100px; padding-top: 20px;
+  padding-bottom: 20px; box-shadow: 0px 1px 3px #eee;">
+
+    <img src="logo.svg" width="120" height="20"
+    style="cursor: pointer;" onclick="showMessage('Logo clicked')">
+
+    <div style="display: flex; color: #666;">
+
+      <div class="nav" onclick="showMessage('Signup clicked')">Signup</div>
+      <div class="nav" onclick="showMessage('About clicked')">About</div>
+      <div class="nav" onclick="showMessage('Products clicked')">Products</div>
+      <div class="nav" onclick="showMessage('Pricing clicked')">Pricing</div>
+      <div class="nav" onclick="showMessage('Support clicked')">Support</div>
+
+    </div>
+  </div>
+
+  <!-- Hero Image -->
+  <div style="display: flex; justify-content: center; margin-top: 60px;">
+    <img src="photo.svg" width="700" style="max-width: 90%;">
+  </div>
+
+  <!-- Heading -->
+  <div style="display: flex; justify-content: center; margin-top: 40px;">
+    <h1 style="font-weight: 500; color: #424242; margin: 0;">
+      Invest in Everything
+    </h1>
+  </div>
+
+  <!-- Description -->
+  <div style="display: flex; justify-content: center; margin-top: 15px;">
+    <p style="color: #666; font-size: 20px; margin: 0; text-align: center;">
+      Online platform to invest in stocks, derivatives, mutual funds, ETFs, bonds, and more.
+    </p>
+  </div>
+
+  <!-- Button -->
+  <div style="display: flex; justify-content: center; margin-top: 35px;">
+    <button onclick="showMessage('Sign Up For Free clicked')"
+    style="background-color: #387ed1; color: white; border: none;
+    padding: 12px 25px; font-size: 16px; cursor: pointer;
+    border-radius: 4px;">
+      Sign Up For Free
+    </button>
+  </div>
+
+  <!-- Message -->
+  <p id="message" style="text-align: center; color: #387ed1;"></p>
+
+  <style>
+    .nav {
+      padding-right: 40px;
+      cursor: pointer;
+      transition: color 0.2s;
+    }
+
+    .nav:hover {
+      color: #387ed1;
+    }
+
+    button:hover {
+      background-color: #2868b2 !important;
+    }
+
+    button:active {
+      transform: scale(0.97);
+    }
+  </style>
+
+  <script>
+    function showMessage(text) {
+      document.getElementById("message").textContent = text;
+    }
+  </script>
+
+</body>
+</html>

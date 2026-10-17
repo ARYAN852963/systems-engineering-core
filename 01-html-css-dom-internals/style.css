@@ -1,0 +1,158 @@
+/* Modern Minimalist Dark Systems Theme */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background-color: #0b0f17;
+  color: #e2e8f0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+}
+
+.app-container {
+  width: 100%;
+  max-width: 900px;
+  background: #111827;
+  border: 1px solid #1f2937;
+  border-radius: 12px;
+  padding: 28px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #1f2937;
+  padding-bottom: 16px;
+  margin-bottom: 24px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.status-indicator {
+  width: 10px;
+  height: 10px;
+  background: #10b981;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #10b981;
+}
+
+h1 {
+  font-size: 1.15rem;
+  letter-spacing: 0.08em;
+  color: #f8fafc;
+  font-weight: 700;
+}
+
+.badge {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  background: #1e293b;
+  color: #38bdf8;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  border: 1px solid #334155;
+}
+
+.content-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1 1 380px;
+  background: #161f30;
+  border: 1px solid #243048;
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+h2 {
+  font-size: 1.05rem;
+  color: #38bdf8;
+  margin-bottom: 8px;
+}
+
+p {
+  font-size: 0.9rem;
+  color: #94a3b8;
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+
+code {
+  font-family: 'JetBrains Mono', monospace;
+  background: #0f172a;
+  color: #f43f5e;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+}
+
+.metric-row {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85rem;
+  margin-bottom: 16px;
+  padding: 8px 12px;
+  background: #0f172a;
+  border-radius: 6px;
+  border: 1px solid #1e293b;
+}
+
+.metric-label {
+  color: #64748b;
+}
+
+.metric-value.live {
+  color: #10b981;
+  font-weight: 600;
+}
+
+button {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: 0.88rem;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.primary-btn {
+  background: #0284c7;
+  color: #ffffff;
+  border: none;
+}
+
+.primary-btn:hover {
+  background: #0369a1;
+}
+
+.secondary-btn {
+  background: transparent;
+  color: #cbd5e1;
+  border: 1px solid #334155;
+}
+
+.secondary-btn:hover {
+  background: #1e293b;
+  border-color: #475569;
+}
