@@ -71,15 +71,66 @@ console.log("Minimum number:", min); // Output: 2
 // -----------------------------------------------------------------------------
 // DRILL 4: Complex Primitives - Database Records Query (8 Mins)
 // -----------------------------------------------------------------------------
+const users = [
+  { firstName: "Alice", lastName: "Smith", age: 25, gender: "Female", isEnrolled: true },
+  { firstName: "Bob", lastName: "Jones", age: 17, gender: "Male", isEnrolled: true },
+  { firstName: "Charlie", lastName: "Brown", age: 30, gender: "Male", isEnrolled: false },
+  { firstName: "Diana", lastName: "Prince", age: 22, gender: "Female", isEnrolled: true },
+  { firstName: "Evan", lastName: "Wright", age: 40, gender: "Male", isEnrolled: true }
+];
 
+function filterActiveAdults(users, targetGender) {
+    for(let i = 0; i < users.length; i++){
+        const value = users[i];
+        if(value.isEnrolled === true && value.age >= 18 && value.gender === targetGender){
+            // FIXED: changed Firstname/Lastname to firstName/lastName
+            console.log(`${value.firstName} ${value.lastName}`);
+        }
+    }
+}
 
-
+filterActiveAdults(users, "Female");
 // -----------------------------------------------------------------------------
 // DRILL 5: Deep Object Mutation & Balance Reconciler (10 Mins)
 // -----------------------------------------------------------------------------
+const account = {
+    id: "101", 
+    owner: 'Aryan', 
+    balance: 5000,
+    ledger: []
+}
+function processTransaction(account, amount, type){
+    if(type === "DEPOSIT"){
+        account.balance += amount;
+        account.ledger.push({type: type, amount: amount, status: "SUCCESS"});
+    } else if(type === "WITHDRAWAL"){
+        if(account.balance >= amount){
+            account.balance -= amount;
+            account.ledger.push({type: type, amount: amount, status: "SUCCESS"})
+        } else{
+             account.ledger.push({type: type, amount: amount, status: "Failed"})
+        }
+        
+    }
+}
 
+console.log("--- Initial State ---");
+console.log(account);
 
+// Test a Deposit
+processTransaction(account, 1500, "DEPOSIT");
+console.log("\n--- After Deposit of 1500 ---");
+console.log(account);
 
+// Test an Insufficient Withdrawal (Trying to withdraw 8000 when balance is 6500)
+processTransaction(account, 8000, "WITHDRAWAL");
+console.log("\n--- After Failed Withdrawal of 8000 ---");
+console.log(account);
+
+// Test a Successful Withdrawal
+processTransaction(account, 20000, "WITHDRAWAL");
+console.log("\n--- After Successful Withdrawal of 2000 ---");
+console.log(account);
 // -----------------------------------------------------------------------------
 // DRILL 6: The Classic Dual-Display Callback Pair (12 Mins)
 // -----------------------------------------------------------------------------
