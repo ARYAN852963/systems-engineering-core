@@ -99,38 +99,37 @@ const userRegistry = {
         role: "admin",
         isActive: true
     },
-    "usr_001": {
-        name: "Ayan",
-        age: 19,
-        role: "Co-Admin",
-        isActive: true
-    },
-    "usr_001": {
-        name: "Harkirat",
-        age: 32,
-        role: "Coder",
-        isActive: false
-    },
-    "usr_001": {
-        name: "Harry",
-        age: 26,
-        role: "Teacher",
-        isActive: true
-    },
-    "usr_001": {
-        name: "Ryan",
+
+    "usr_002": {
+        name: "Rahul",
         age: 17,
-        role: "Sweeper",
+        role: "user",
         isActive: false
     },
+
+    "usr_003": {
+        name: "Aman",
+        age: 18,
+        role: "user",
+        isActive: true
+    }
 };
-function finduserById(regiatry, id){
-    for(let i = 0; i < regiatry.length; i++)
-        if(userRegistry[i].isActive){
-            console.log("kallu")
-        }
+
+function finduserById(regiatry, id) {
+    if (regiatry[id] === undefined) {
+        console.log(`ERROR: No record found for ID ${id}`);
+    } 
+    else if (regiatry[id].isActive === true) {
+        console.log(`FOUND: ${regiatry[id].name} | Role: ${regiatry[id].role}`);
+    } 
+    else {
+        console.log(`ACCOUNT SUSPENDED: ${regiatry[id].name}`);
+    }
 }
-finduserById(userRegistry, "user_001")
+
+finduserById(userRegistry, "usr_001");
+finduserById(userRegistry, "usr_002");
+finduserById(userRegistry, "usr_999");
 
 // -----------------------------------------------------------------------------
 // DRILL 6: The Classic Dual-Display Callback Pair (12 Mins)
