@@ -92,7 +92,45 @@ console.log(total_bill);
 // DRILL 5: Deep Object Mutation & Balance Reconciler (10 Mins)
 // -----------------------------------------------------------------------------
 
-
+const userRegistry = {
+    "usr_001": {
+        name: "Aryan",
+        age: 16,
+        role: "admin",
+        isActive: true
+    },
+    "usr_001": {
+        name: "Ayan",
+        age: 19,
+        role: "Co-Admin",
+        isActive: true
+    },
+    "usr_001": {
+        name: "Harkirat",
+        age: 32,
+        role: "Coder",
+        isActive: false
+    },
+    "usr_001": {
+        name: "Harry",
+        age: 26,
+        role: "Teacher",
+        isActive: true
+    },
+    "usr_001": {
+        name: "Ryan",
+        age: 17,
+        role: "Sweeper",
+        isActive: false
+    },
+};
+function finduserById(regiatry, id){
+    for(let i = 0; i < regiatry.length; i++)
+        if(userRegistry[i].isActive){
+            console.log("kallu")
+        }
+}
+finduserById(userRegistry, "user_001")
 
 // -----------------------------------------------------------------------------
 // DRILL 6: The Classic Dual-Display Callback Pair (12 Mins)
