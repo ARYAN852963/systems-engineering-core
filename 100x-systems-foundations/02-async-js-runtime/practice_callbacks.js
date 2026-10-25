@@ -75,9 +75,17 @@ let total_bill = 0;
 
 function getTotalCost(cart){
     for(let i = 0; i < cart.length; i++)
-    total_bill = i.price * i.qty;
+    total_bill = cart[i].price * cart[i].qty;
 }
-console.log(getTotalCost(cart))
+function getExpensiveItems(cart, threshold){
+    for(let i = 0; i < cart.length; i++){
+        if(cart[i].price > threshold){
+            console.log(cart[i].name)
+        }
+    }
+}
+getTotalCost(cart)
+getExpensiveItems(cart, 1000)
 console.log(total_bill);
 
 // -----------------------------------------------------------------------------
