@@ -100,18 +100,11 @@ const account = {
     ledger: []
 }
 function processTransaction(account, amount, type){
-    if(type === "DEPOSIT"){
-        account.balance += amount;
-        account.ledger.push({type: type, amount: amount, status: "SUCCESS"});
-    } else if(type === "WITHDRAWAL"){
-        if(account.balance >= amount){
-            account.balance -= amount;
-            account.ledger.push({type: type, amount: amount, status: "SUCCESS"})
-        } else{
-             account.ledger.push({type: type, amount: amount, status: "Failed"})
-        }
-        
-    }
+    if(type == "deposiyt")
+        add ht=SVGGElementhdfd 
+    sfgsdkg
+    hgeiugfdkshgd
+    
 }
 
 console.log("--- Initial State ---");
