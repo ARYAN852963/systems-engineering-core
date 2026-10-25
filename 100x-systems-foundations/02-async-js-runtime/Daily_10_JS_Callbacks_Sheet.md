@@ -29,6 +29,55 @@
 * **Time Limit:** 5 Minutes
 * You are given an array of Celsius temperatures: `[0, 20, 37, 100, -40]`.
 * Write a function `convertTemperatures(temps)` that:
+  - Iterates through the array using a loop (no `.map()` allowed).
+  - For each temperature, calculates the Fahrenheit equivalent using the formula: `F = (C × 9/5) + 32`.
+  - Logs each result in the format: `"20°C = 68°F"`.
+* Call the function and verify all 5 outputs are mathematically correct.
+
+---
+
+### Drill 3: FizzBuzz Variant (Triple Threat)
+* **Time Limit:** 6 Minutes
+* Write a function `tripleCheck(n)` that loops from 1 to `n` and:
+  - If the number is divisible by 3 AND 5: logs `"SystemCritical"`.
+  - If the number is divisible by 3 only: logs `"Kernel"`.
+  - If the number is divisible by 5 only: logs `"Memory"`.
+  - Otherwise: logs the number itself.
+* Call the function with `n = 20` and verify the output is logically correct.
+
+---
+
+## 🟡 PART 2: PROGRESSIVE OVERLOAD
+
+### Drill 4: Shopping Cart State Manager
+* **Time Limit:** 9 Minutes
+* Create an array of product objects: `{ id, name, price, qty }` (at least 4 products).
+* Write 2 functions:
+  1. `getTotalCost(cart)`: iterates through the cart, multiplies `price × qty` for each product, and returns the total bill amount.
+  2. `getExpensiveItems(cart, threshold)`: loops through and logs the name of every product where `price > threshold`.
+* Test both functions with realistic data and verify outputs.
+
+---
+
+### Drill 5: User Profile Registry & Lookup Engine
+* **Time Limit:** 11 Minutes
+* Build a registry system:
+  - Create an object `userRegistry` where each key is a userId (e.g., `"usr_001"`) and each value is a user profile object: `{ name, age, role, isActive }`.
+  - Write a function `findUserById(registry, id)` that:
+    - If the ID exists AND `isActive === true`: logs `"FOUND: [name] | Role: [role]"`.
+    - If the ID exists but `isActive === false`: logs `"ACCOUNT SUSPENDED: [name]"`.
+    - If the ID does not exist at all: logs `"ERROR: No record found for ID [id]"`.
+* Test with at least 3 IDs: one valid active, one suspended, one non-existent.
+
+---
+
+### Drill 6: The Timer Callback Engine
+* **Time Limit:** 13 Minutes
+* Write a function `runTimedTask(taskName, delayMs, onComplete)`:
+  - Logs `"[taskName]: Starting task..."` immediately.
+  - Uses `setTimeout` to wait `delayMs` milliseconds.
+  - When the timer fires, it must call `onComplete(taskName, delayMs)`.
+* Write a callback `onComplete(name, time)` that logs: `"✅ [name] completed after [time]ms"`.
 * Run 3 separate timed tasks with delays: 500ms, 1200ms, and 2000ms.
 * Observe and understand the order in which the callbacks fire vs the order you called them.
 
