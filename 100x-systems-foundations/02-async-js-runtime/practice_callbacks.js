@@ -135,11 +135,70 @@ finduserById(userRegistry, "usr_999");
 // DRILL 6: The Classic Dual-Display Callback Pair (12 Mins)
 // -----------------------------------------------------------------------------
 
+function runTimedTask(taskname, delayMs, onComplete){
+    console.log(`${taskname}: Starting task...`)
+    setTimeout(() => {
+    onComplete(taskname, delayMs);
+    }, delayMs);
+}
+function onComplete(name, Time){
+        console.log(`${name} completed after ${Time}ms`)
+    }
+
+runTimedTask("Task A", 500, onComplete);
+runTimedTask("Task B", 1200, onComplete);
+runTimedTask("Task C", 2000, onComplete);
 
 
 // -----------------------------------------------------------------------------
 // DRILL 7: Higher-Order Arithmetic Callback Dispatcher (14 Mins)
 // -----------------------------------------------------------------------------
+const str = [
+    " aryan sharma ",
+    "PRIYA SINGH",
+    "ravi   gupta",
+    " AISHA khan"
+];
+
+// 1. Remove whitespace from both ends
+function sanitize(str) {
+    return str.trim();
+}
+
+// 2. Convert the string to lowercase
+function normalize(str) {
+    return str.toLowerCase();
+}
+
+// 3. Capitalize the first letter of each word
+function formatName(str) {
+    return str
+        .split(" ")
+        .filter(word => word !== "")
+        .map(word => word[0].toUpperCase() + word.slice(1))
+        .join(" ");
+}
+
+// 4. Process every name through the three functions
+function processUsers(names) {
+    const new_string = [];
+
+    for (let i = 0; i < names.length; i++) {
+        let name = sanitize(names[i]);
+        name = normalize(name);
+        name = formatName(name);
+
+        new_string.push(name);
+    }
+
+    return new_string;
+}
+
+const result = processUsers(str);
+
+console.log("Processed:", result);
+console.log("Original:", str);
+
 
 
 
