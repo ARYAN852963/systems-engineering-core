@@ -205,7 +205,48 @@ console.log("Original:", str);
 // -----------------------------------------------------------------------------
 // DRILL 8: Callback-Driven Collection Hunter (16 Mins)
 // -----------------------------------------------------------------------------
+// 1. Callback Functions
+function onGranted(user_name) {
+    console.log(`🟢 ACCESS GRANTED: Welcome, ${user_name}`);
+}
 
+function onDenied(user_name, reason) {
+    console.log(`🔴 ACCESS DENIED: ${user_name} | Reason: ${reason}`);
+}
+
+// 2. Main Access Control Function
+function checkAccess(user, onGranted, onDenied) {
+    // Explicit parentheses ensure credits and verification are evaluated together
+    if (user.role === "ADMIN" || (user.credits >= 100 && user.isVerified === true)) {
+        onGranted(user.name);
+    } else {
+        // Determine the specific reason for denial
+        let reason = "";
+        
+        if (user.isVerified !== true) {
+            reason = "Not Verified";
+        } else if (user.credits < 100) {
+            reason = "Insufficient Credits";
+        } else {
+            reason = "Invalid Role / Permissions";
+        }
+        
+        onDenied(user.name, reason);
+    }
+}
+
+// 3. Test Cases (4 Different User Objects covering all branches)
+const user1 = { name: "Alice", role: "ADMIN", credits: 50, isVerified: false };      // Allowed (Admin bypass)
+const user2 = { name: "Bob", role: "USER", credits: 150, isVerified: true };        // Allowed (Met credit/verification rules)
+const user3 = { name: "Charlie", role: "USER", credits: 120, isVerified: false };   // Denied (Not Verified)
+const user4 = { name: "David", role: "USER", credits: 40, isVerified: true };       // Denied (Insufficient Credits)
+
+// 4. Running the Tests
+console.log("--- Running Access Control Tests ---");
+checkAccess(user1, onGranted, onDenied); // Expected: 🟢
+checkAccess(user2, onGranted, onDenied); // Expected: 🟢
+checkAccess(user3, onGranted, onDenied); // Expected: 🔴 (Reason: Not Verified)
+checkAccess(user4, onGranted, onDenied); // Expected: 🔴 (Reason: Insufficient Credits)
 
 
 // -----------------------------------------------------------------------------
