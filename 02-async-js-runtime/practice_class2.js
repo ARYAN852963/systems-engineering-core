@@ -21,9 +21,20 @@
  * Time Limit: 3 Minutes
  */
 function benchmarkCpuTask(limit) {
-    // TODO: Calculate sum 1 to limit synchronously, measure wall-clock duration in ms.
-    // Return: { computedSum, durationMs }
+const start = performance.now()
+
+let count = 0;
+for(let i = 0; i <= limit; i++){
+    count += i;
 }
+const end = performance.now()
+return{
+    count,
+    duration: end - start,
+};
+}
+const result = benchmarkCpuTask(100_000_000);
+console.log(result)
 
 /**
  * DRILL 2: Functional Arguments (The Higher-Order Math Dispatcher)
