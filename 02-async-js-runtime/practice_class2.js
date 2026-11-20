@@ -64,14 +64,13 @@ function runEventLoopTrace() {
     console.log("sync 2")
     console.log("sync 3")
     setTimeout(() => {
-        console.log("sync 4");
-    }, 10)
+        console.log("Timeout 1");
+    }, 0)
      setTimeout(() => {
-        console.log("sync 5")
-    }, 100)
-    return runEventLoopTrace;
+        console.log("Timeout 2")
+    }, 0)
 }
-console.log(runEventLoopTrace)
+runEventLoopTrace();
 
 // ============================================================================
 // 🟡 PHASE 2: PROGRESSIVE OVERLOAD (Drills 4–9)
