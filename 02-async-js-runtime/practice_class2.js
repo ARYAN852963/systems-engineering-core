@@ -56,7 +56,15 @@ function executeOperation(a, b, operationCallback) {
     }
     return operationCallback(a,b);
 }
-fun
+function add(x,y){
+    return x + y;
+}
+function subtract(x, y){
+    return x + y;
+}
+console.log(executeOperation(10, 15, add))
+console.log(executeOperation(10, 15, subtract))
+
 
 /**
  * DRILL 3: Event Loop Queue Interleaving Trace
