@@ -12,6 +12,8 @@
  * ============================================================================
  */
 
+const { use } = require("react");
+
 // ============================================================================
 // 🟢 PHASE 1: WARMUPS (Drills 1–3)
 // ============================================================================
@@ -49,8 +51,12 @@ function power(base, exp) {
 }
 
 function executeOperation(a, b, operationCallback) {
-    // TODO: Validate callback, delegate computation
+    if(typeof operationCallback !== "function"){
+        throw new TypeError("Hellow bhai error came!!!")
+    }
+    return operationCallback(a,b);
 }
+fun
 
 /**
  * DRILL 3: Event Loop Queue Interleaving Trace
