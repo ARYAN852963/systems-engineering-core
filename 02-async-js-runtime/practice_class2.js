@@ -34,7 +34,7 @@ function multiply(x, y) {
 }
 
 function power(base, exp) {
-    // TODO: Return base ** exp
+    return base ** exp
 }
 
 function executeOperation(a, b, operationCallback) {
