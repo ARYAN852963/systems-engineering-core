@@ -30,7 +30,7 @@ function benchmarkCpuTask(limit) {
  * Time Limit: 4 Minutes
  */
 function multiply(x, y) {
-    // TODO: Return x * y
+    return x * y
 }
 
 function power(base, exp) {
