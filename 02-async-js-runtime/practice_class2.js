@@ -60,9 +60,18 @@ console.log(executeOperation(10, 15, subtract))
  * Time Limit: 4 Minutes
  */
 function runEventLoopTrace() {
-    // TODO: Write 3 sync logs and 2 setTimeout(..., 0) logs proving the event loop order.
-    // Add explanation comment above.
+    console.log("sync 1")
+    console.log("sync 2")
+    console.log("sync 3")
+    setTimeout(() => {
+        console.log("sync 4");
+    }, 10)
+     setTimeout(() => {
+        console.log("sync 5")
+    }, 100)
+    return runEventLoopTrace;
 }
+console.log(runEventLoopTrace)
 
 // ============================================================================
 // 🟡 PHASE 2: PROGRESSIVE OVERLOAD (Drills 4–9)
