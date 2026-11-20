@@ -38,18 +38,7 @@ return{
 const result = benchmarkCpuTask(100_000_000);
 console.log(result)
 
-/**
- * DRILL 2: Functional Arguments (The Higher-Order Math Dispatcher)
- * Time Limit: 4 Minutes
- */
-function multiply(x, y) {
-    return x * y
-}
-
-function power(base, exp) {
-    return base ** exp
-}
-
+// 2.
 function executeOperation(a, b, operationCallback) {
     if(typeof operationCallback !== "function"){
         throw new TypeError("Hellow bhai error came!!!")
