@@ -39,3 +39,19 @@ car1.drive();
 car1.showFuelType();
 car1.showDetails();
 car1.stop();
+
+// 2.
+class user{
+    constructor(name){
+        this.name = name;
+    }
+    introduce(){
+        console.log(`Hi, I am ${this.name}`)
+    }
+    static getPlatform(){
+        console.log(`Platform:  Node.js`)
+    }
+}
+const user1 = new user('Ajitesh')
+user1.introduce();
+user.getPlatform();
