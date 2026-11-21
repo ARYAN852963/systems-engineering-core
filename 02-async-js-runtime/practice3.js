@@ -55,3 +55,20 @@ class user{
 const user1 = new user('Ajitesh')
 user1.introduce();
 user.getPlatform();
+// 3.
+    class BankAccount{
+        #balance;
+        constructor(balance, ) {
+            this.#balance = balance;
+        }
+        deposit(ammount){
+            this.ammount = ammount;
+            this.#balance += this.ammount;
+        }
+        getbalance(){
+            console.log(this.#balance)
+        }
+    }
+    const acc1 = new BankAccount(1000);
+    acc1.deposit(500);
+    acc1.getbalance();
