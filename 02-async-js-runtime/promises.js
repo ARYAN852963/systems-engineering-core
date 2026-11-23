@@ -2,7 +2,7 @@ const task1 = () =>{
     return new Promise((resolve) => {
         setTimeout(() => {
             console.log("Task 1");
-            resolve();
+          resolve();
         }, 1000);
     });
 };
@@ -11,7 +11,7 @@ const task2 = () => {
         setTimeout(() => {
             console.log("Task 2");
         }, 1000);
-        resolve();
+         resolve();
     });
 }
 const task3 = () => {
@@ -19,7 +19,7 @@ const task3 = () => {
         setTimeout(() => {
             console.log("Task 3") 
         }, 1000);
-        resolve();
+         resolve();
     });
 }
 const task4 = () => {
@@ -27,7 +27,7 @@ const task4 = () => {
         setTimeout(() => {
             console.log("Task 4") 
         }, 1000);
-        resolve();
+         resolve();
     });
 }
 task1()
