@@ -93,3 +93,24 @@ async function call(){
     console.log(values);
 }
 call()
+// 5.
+function task(callback) {
+    console.log("A");
+
+    setTimeout(() => {
+        callback(null, 50);
+    }, 0);
+
+    console.log("B");
+}
+
+task((error, data) => {
+    if (error) {
+        console.log("C");
+        return;
+    }
+
+    console.log(data);
+});
+
+console.log("D");
