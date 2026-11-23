@@ -34,3 +34,13 @@ task1()
 .then(() => task2())
 .then(() => task3())
 .then(() => task4())
+
+// 2.
+async function runTasks() {
+    await task1();
+    await task2();
+    await task3();
+    await task4();
+}
+
+runTasks();
