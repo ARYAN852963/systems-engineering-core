@@ -36,7 +36,7 @@ task1()
 .then(() => task4())
 
 // 2.
-const task1 = () =>{
+const work1 = () =>{
     return new Promise((resolve) => {
         setTimeout(() => {
             console.log("Task 1");
@@ -44,7 +44,7 @@ const task1 = () =>{
         }, 1000);
     });
 };
-const task2 = () => {
+const work2 = () => {
     return new Promise((resolve) => {
         setTimeout(() => {
             console.log("Task 2");
@@ -52,7 +52,7 @@ const task2 = () => {
         resolve();
     });
 }
-const task3 = () => {
+const work3 = () => {
     return new Promise((resolve) =>  {
         setTimeout(() => {
             console.log("Task 3") 
@@ -60,7 +60,7 @@ const task3 = () => {
         resolve();
     });
 }
-const task4 = () => {
+const work4 = () => {
     return new Promise((resolve) =>  {
         setTimeout(() => {
             console.log("Task 4") 
@@ -76,3 +76,4 @@ async function runTasks() {
 }
 
 runTasks();
+// 3.
