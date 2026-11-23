@@ -77,7 +77,7 @@ async function runTasks() {
 
 runTasks();
 // 3.
-async function calculate{
+async function calculate() {
     return 50;
 }
 calculate().then((value) => {
