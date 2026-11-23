@@ -78,8 +78,18 @@ async function runTasks() {
 runTasks();
 // 3.
 async function calculate() {
-    return 50;
+    return 200;
 }
 calculate().then((value) => {
     console.log(value);
 })
+// 4.
+async function calculate() {
+    return 200;
+}
+
+async function call(){
+    const values = await calculate();
+    console.log(values);
+}
+call()
