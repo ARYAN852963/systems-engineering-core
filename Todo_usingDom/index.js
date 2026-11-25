@@ -3,6 +3,8 @@ function whenclicked(){
     const todo = element.value;
     console.log(todo);
 
-    const newdiv = document.createElement("disv");
+    const newdiv = document.createElement("div");
     newdiv.innerHTML = todo;
+
+    const container = document.getElementById("todo-list")
 }
